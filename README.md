@@ -37,7 +37,7 @@ mtcars %>%
   theme_nord(light=TRUE,base_size=12)
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-light-theme-1.png" width="100%" />
 
 ``` r
 mtcars %>%
@@ -47,4 +47,22 @@ mtcars %>%
   theme_nord(light=FALSE,base_size=12)
 ```
 
-<img src="man/figures/README-cars-1.png" width="100%" />
+<img src="man/figures/README-dark-theme-1.png" width="100%" />
+
+Built in color palettes can be used with the `scale_fill_theme` and
+`scale_color_theme` functions:
+
+``` r
+library(ggplot2)
+ggplot(mtcars, aes(x=as.factor(cyl), fill=as.factor(cyl) )) +
+  geom_bar() +
+  scale_fill_theme(theme = "nord_aurora")
+```
+
+<img src="man/figures/README-scale-fill-theme-1.png" width="100%" />
+
+## Aknowledgements
+
+- Nord theme colors are based on the [Nord color
+  palette](https://www.nordtheme.com/). The Nord theme was created by
+  [Arctic Ice Studio](https://github.com/arcticicestudio)
