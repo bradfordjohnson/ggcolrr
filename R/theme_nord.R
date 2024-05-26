@@ -9,12 +9,14 @@
 #'
 #' @return A `ggplot2::theme` object with customized text sizes and colors.
 #' @import ggplot2
-#' @import showtext
+#' @importFrom showtext font_add_google
+#' @importFrom showtext showtext_auto
 #' @export theme_nord
 #'
 #' @examples
 #' library(ggplot2)
 #' library(showtext)
+#' showtext_auto()
 #' ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'   geom_point() +
 #'   theme_nord(light = TRUE, base_size = 14, font = "Open Sans")
