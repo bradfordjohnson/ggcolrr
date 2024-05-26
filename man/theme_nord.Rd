@@ -4,12 +4,16 @@
 \alias{theme_nord}
 \title{A Nord theme for ggplot2}
 \usage{
-theme_nord(..., light = TRUE, base_size = 12, font = "Open Sans")
+theme_nord(..., light = TRUE, base_size = 12, font = "Roboto")
 }
 \arguments{
 \item{...}{Additional arguments passed to \code{ggplot2::theme}.}
 
+\item{light}{Logical. If \code{TRUE}, the theme will be light. If \code{FALSE}, the theme will be dark. Default is \code{TRUE}.}
+
 \item{base_size}{Numeric. The base size for text elements. Default is 12.}
+
+\item{font}{Character. The font to use for text elements, uses sysfonts::font_add_google(). Default is "Roboto".}
 }
 \value{
 A \code{ggplot2::theme} object with customized text sizes and colors.
@@ -19,7 +23,9 @@ This function creates a ggplot2 theme
 }
 \examples{
 library(ggplot2)
+library(showtext)
+showtext_auto()
 ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_point() +
-  theme_nord(light = TRUE, base_size = 14, font = "Open Sans")
+  theme_nord(light = TRUE, base_size = 14, font = "Roboto")
 }
