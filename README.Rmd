@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/bradfordjohnson/ggcolrr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/bradfordjohnson/ggcolrr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of ggcolrr is to ...
+The goal of ggcolrr is to add a collection of custom, reproducible ggplot2 themes to your R toolbox.
 
 ## Installation
 
@@ -35,22 +35,21 @@ devtools::install_github("bradfordjohnson/ggcolrr")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
+library(tidyverse)
+library(showtext)
 library(ggcolrr)
-## basic example code
-```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+mtcars %>%
+  ggplot(aes(x=mpg,y=hp)) +
+  geom_point() +
+  labs(title="Example Light Theme") +
+  theme_nord(light=TRUE,base_size=12)
+```
 
 ```{r cars}
-summary(cars)
+mtcars %>%
+  ggplot(aes(x=mpg,y=hp)) +
+  geom_point() +
+  labs(title="Example Dark Theme") +
+  theme_nord(light=FALSE,base_size=12)
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
