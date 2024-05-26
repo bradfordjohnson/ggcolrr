@@ -22,6 +22,8 @@
 #' ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'   geom_point() +
 #'   theme_nord(light = TRUE, base_size = 14, font = "Roboto")
+
+
 theme_nord <- function(..., light = TRUE, base_size = 12, font = "Roboto") {
 
   if (light) {
