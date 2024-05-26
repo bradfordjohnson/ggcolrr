@@ -9,8 +9,9 @@
 #'
 #' @return A `ggplot2::theme` object with customized text sizes and colors.
 #' @import ggplot2
-#' @importFrom sysfonts font_add_google
-#' @importFrom showtext showtext_auto
+#' @import jsonlite
+#' @import sysfonts
+#' @import showtext
 #' @export theme_nord
 #'
 #' @examples
