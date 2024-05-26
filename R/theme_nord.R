@@ -5,11 +5,11 @@
 #' @param ... Additional arguments passed to `ggplot2::theme`.
 #' @param base_size Numeric. The base size for text elements. Default is 12.
 #' @param light Logical. If `TRUE`, the theme will be light. If `FALSE`, the theme will be dark. Default is `TRUE`.
-#' @param font Character. The font to use for text elements, uses showtext::font_add_google(). Default is "Open Sans".
+#' @param font Character. The font to use for text elements, uses sysfonts::font_add_google(). Default is "Roboto".
 #'
 #' @return A `ggplot2::theme` object with customized text sizes and colors.
 #' @import ggplot2
-#' @importFrom showtext font_add_google
+#' @importFrom sysfonts font_add_google
 #' @importFrom showtext showtext_auto
 #' @export theme_nord
 #'
@@ -19,8 +19,8 @@
 #' showtext_auto()
 #' ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'   geom_point() +
-#'   theme_nord(light = TRUE, base_size = 14, font = "Open Sans")
-theme_nord <- function(..., light = TRUE, base_size = 12, font = "Open Sans") {
+#'   theme_nord(light = TRUE, base_size = 14, font = "Roboto")
+theme_nord <- function(..., light = TRUE, base_size = 12, font = "Roboto") {
 
   if (light) {
     background_color <- "#ECEFF4"
@@ -36,7 +36,7 @@ theme_nord <- function(..., light = TRUE, base_size = 12, font = "Open Sans") {
 
   showtext::showtext_auto()
 
-  showtext::font_add_google(name = font, family = font)
+  sysfonts::font_add_google(name = font, family = font)
 
   ggplot2::theme(
 
