@@ -10,6 +10,7 @@
 #' @return A `ggplot2::theme` object with customized text sizes and colors.
 #' @import ggplot2
 #' @import jsonlite
+#' @import curl
 #' @import sysfonts
 #' @import showtext
 #' @export theme_nord
