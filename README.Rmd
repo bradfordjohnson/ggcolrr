@@ -66,3 +66,4 @@ ggplot(mtcars, aes(x=as.factor(cyl), fill=as.factor(cyl) )) +
 ## Aknowledgements
 
 - Nord theme colors are based on the [Nord color palette](https://www.nordtheme.com/). The Nord theme was created by [Arctic Ice Studio](https://github.com/arcticicestudio)
+- [Discord](https://discord.com/branding) theme colors
