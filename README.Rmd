@@ -41,17 +41,19 @@ library(ggcolrr)
 
 mtcars %>%
   ggplot(aes(x=mpg,y=hp)) +
-  geom_point() +
+  geom_point(aes(color=factor(vs))) +
   labs(title="Example Light Theme") +
-  theme_nord(light=TRUE,base_size=12)
+  theme_nord(light=TRUE,base_size=12) +
+  scale_color_theme(theme = "nord_aurora")
 ```
 
 ```{r dark-theme, message=FALSE, warning=FALSE}
 mtcars %>%
   ggplot(aes(x=mpg,y=hp)) +
-  geom_point() +
+  geom_point(aes(color=factor(vs))) +
   labs(title="Example Dark Theme") +
-  theme_nord(light=FALSE,base_size=12)
+  theme_nord(light=FALSE,base_size=12) +
+  scale_color_theme(theme = "nord_aurora")
 ```
 
 Built in color palettes can be used with the `scale_fill_theme` and `scale_color_theme` functions:

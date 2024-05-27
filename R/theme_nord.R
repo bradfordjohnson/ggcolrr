@@ -28,10 +28,12 @@ theme_nord <- function(..., light = TRUE, base_size = 12, font = "Roboto") {
 
   if (light) {
     background_color <- "#ECEFF4"
+    grid_color <- "#3B4252"
     title_color <- "#2E3440"
     text_color <- "#2E3440"
   } else {
     background_color <- "#4C566A"
+    grid_color <- "#D8DEE9"
     title_color <- "#ECEFF4"
     text_color <- "#ECEFF4"
   }
@@ -44,14 +46,14 @@ theme_nord <- function(..., light = TRUE, base_size = 12, font = "Roboto") {
 
   ggplot2::theme(
 
-    plot.margin = ggplot2::margin(5, 10, 10, 10, "mm"),
+    plot.margin = ggplot2::margin(5, 5, 5, 5, "mm"),
     plot.background = ggplot2::element_rect(fill = background_color, color = background_color),
     plot.title = ggplot2::element_text(size = title_size, color = title_color, family = font, margin = ggplot2::margin(0,0,3,0,"mm")),
     plot.subtitle = ggplot2::element_text(size = base_size, color = text_color, family = font, margin = ggplot2::margin(2,0,7,0,"mm")),
     plot.caption = ggplot2::element_text(size = base_size, color = text_color, family = font),
 
     panel.background = ggplot2::element_rect(fill = background_color, color = background_color),
-    panel.grid.major = ggplot2::element_line(color = text_color, linewidth = .1),
+    panel.grid.major = ggplot2::element_line(color = grid_color, linewidth = .1),
     panel.grid.minor = ggplot2::element_blank(),
 
     strip.background = ggplot2::element_rect(fill = background_color, color = background_color),
@@ -67,6 +69,7 @@ theme_nord <- function(..., light = TRUE, base_size = 12, font = "Roboto") {
     legend.title = ggplot2::element_text(size = base_size, color = text_color, family = font, margin = ggplot2::margin(0,3,0,0,"mm")),
     legend.text = ggplot2::element_text(size = base_size, color = text_color, family = font),
     legend.key = ggplot2::element_rect(fill = background_color, color = background_color),
+    legend.box.background = ggplot2::element_rect(fill = background_color, color = background_color),
 
     complete = FALSE,
     validate = TRUE,

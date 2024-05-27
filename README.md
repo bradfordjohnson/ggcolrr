@@ -32,9 +32,10 @@ library(ggcolrr)
 
 mtcars %>%
   ggplot(aes(x=mpg,y=hp)) +
-  geom_point() +
+  geom_point(aes(color=factor(vs))) +
   labs(title="Example Light Theme") +
-  theme_nord(light=TRUE,base_size=12)
+  theme_nord(light=TRUE,base_size=12) +
+  scale_color_theme(theme = "nord_aurora")
 ```
 
 <img src="man/figures/README-light-theme-1.png" width="100%" />
@@ -42,9 +43,10 @@ mtcars %>%
 ``` r
 mtcars %>%
   ggplot(aes(x=mpg,y=hp)) +
-  geom_point() +
+  geom_point(aes(color=factor(vs))) +
   labs(title="Example Dark Theme") +
-  theme_nord(light=FALSE,base_size=12)
+  theme_nord(light=FALSE,base_size=12) +
+  scale_color_theme(theme = "nord_aurora")
 ```
 
 <img src="man/figures/README-dark-theme-1.png" width="100%" />
@@ -66,3 +68,4 @@ ggplot(mtcars, aes(x=as.factor(cyl), fill=as.factor(cyl) )) +
 - Nord theme colors are based on the [Nord color
   palette](https://www.nordtheme.com/). The Nord theme was created by
   [Arctic Ice Studio](https://github.com/arcticicestudio)
+- [Discord](https://discord.com/branding) theme colors
