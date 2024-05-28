@@ -65,6 +65,14 @@ ggplot(mtcars, aes(x=as.factor(cyl), fill=as.factor(cyl) )) +
   scale_fill_theme(theme = "nord_aurora")
 ```
 
+Fonts Awesome Brand icons via the `create_brand_caption()` function:
+
+```{r scale-color-theme, message=FALSE, warning=FALSE}
+ggplot() +
+  create_brand_caption(caption_text = "ggcolrr") +
+  theme(plot.caption = ggtext::element_textbox_simple(margin = margin(3,0,0,0,"mm"), size = 15))
+```
+
 ## Aknowledgements
 
 - Nord theme colors are based on the [Nord color palette](https://www.nordtheme.com/). The Nord theme was created by [Arctic Ice Studio](https://github.com/arcticicestudio)

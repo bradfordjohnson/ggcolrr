@@ -63,6 +63,16 @@ ggplot(mtcars, aes(x=as.factor(cyl), fill=as.factor(cyl) )) +
 
 <img src="man/figures/README-scale-fill-theme-1.png" width="100%" />
 
+Fonts Awesome Brand icons via the `create_brand_caption()` function:
+
+``` r
+ggplot() +
+  create_brand_caption(caption_text = "ggcolrr") +
+  theme(plot.caption = ggtext::element_textbox_simple(margin = margin(3,0,0,0,"mm"), size = 15))
+```
+
+<img src="man/figures/README-scale-color-theme-1.png" width="100%" />
+
 ## Aknowledgements
 
 - Nord theme colors are based on the [Nord color

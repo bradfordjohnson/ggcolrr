@@ -13,4 +13,6 @@ Imports:
     showtext,
     sysfonts,
     jsonlite,
-    curl
+    curl,
+    htmltools,
+    ggtext
