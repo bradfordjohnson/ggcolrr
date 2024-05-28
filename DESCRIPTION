@@ -14,5 +14,4 @@ Imports:
     sysfonts,
     jsonlite,
     curl,
-    htmltools,
     ggtext
