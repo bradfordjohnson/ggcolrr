@@ -14,6 +14,10 @@
 #' @export create_brand_caption
 #'
 #' @examples
+#' library(ggplot2)
+#' library(showtext)
+#' library(ggtext)
+#' library(sysfonts)
 #' ggplot() +
 #' create_brand_caption(caption_text = "ggcolrr") +
 #' theme(plot.caption = ggtext::element_textbox_simple(margin = margin(3,0,0,0,"mm"), size = 15))

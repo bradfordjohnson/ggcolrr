@@ -24,6 +24,10 @@ A ggplot2::labs caption with the specified brand icon and caption text.
 This function allows you to create a brand caption for ggplot2 plots, using Font Awesome 6 Brands Regular.
 }
 \examples{
+library(ggplot2)
+library(showtext)
+library(ggtext)
+library(sysfonts)
 ggplot() +
 create_brand_caption(caption_text = "ggcolrr") +
 theme(plot.caption = ggtext::element_textbox_simple(margin = margin(3,0,0,0,"mm"), size = 15))
