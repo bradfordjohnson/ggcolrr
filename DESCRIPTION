@@ -13,4 +13,5 @@ Imports:
     showtext,
     sysfonts,
     jsonlite,
-    curl
+    curl,
+    ggtext
